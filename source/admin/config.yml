@@ -33,14 +33,15 @@ collections:
       - label: "Categories"
         name: "categories"
         widget: "list"
-          label: "Categories"
-          name: "categories"
-          widget: "relation"
-          collection: "categories"
-          multiple: true
-          required: false
-          searchFields: ["title"]
-          valueField: "title"
+        field:
+          - label: "Categories"
+            name: "categories"
+            widget: "relation"
+            collection: "categories"
+            multiple: true
+            required: false
+            searchFields: ["title"]
+            valueField: "title"
       - { label: "Featured?", name: "featured", widget: "boolean", default: false, hint: "Should it be featured on the home page?" }
       - { name: "extends", widget: "hidden", required: true, default: "_layouts.post" }
       - { name: "section", widget: "hidden", required: true, default: "content" }
