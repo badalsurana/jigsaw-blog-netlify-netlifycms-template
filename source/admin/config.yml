@@ -52,5 +52,4 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true, default: "" }
       - { label: "Description", name: "description", widget: "string", required: true, default: "" }
-      - { label: "Content", name: "body", widget: "markdown", hint: "Main content goes here." }
       - { name: "extends", widget: "hidden", required: true, default: "_layouts.category" }
