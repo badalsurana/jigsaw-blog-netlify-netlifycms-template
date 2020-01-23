@@ -39,3 +39,18 @@ collections:
       - { label: "Featured?", name: "featured", widget: "boolean", default: false, hint: "Should it be featured on the home page?" }
       - { name: "extends", widget: "hidden", required: true, default: "_layouts.post" }
       - { name: "section", widget: "hidden", required: true, default: "content" }
+  - name: "categories"
+    label: "Categories"
+    label_singular: "Category"
+    description: >
+      All Categories
+    folder: "source/_categories"
+    extension: "md"
+    format: "yaml-frontmatter"
+    create: true
+    identifier_field: "title"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true, default: "" }
+      - { label: "Description", name: "description", widget: "string", required: true, default: "" }
+      - { label: "Content", name: "body", widget: "markdown", hint: "Main content goes here." }
+      - { name: "extends", widget: "hidden", required: true, default: "_layouts.category" }
