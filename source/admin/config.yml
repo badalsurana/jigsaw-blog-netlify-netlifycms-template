@@ -20,6 +20,7 @@ collections:
     identifier_field: "title"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true, default: "" }
+      - { label: "Author", name: "author", widget: "string", required: true, default: "" }
       - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", required: true, default: "" }
       - { label: "Description", name: "description", widget: "string", required: true, default: "" }
       - { label: "Content", name: "body", widget: "markdown", hint: "Main content goes here." }
@@ -32,16 +33,9 @@ collections:
             multiple: false
       - label: "Categories"
         name: "categories"
-        widget: "list"
-        field:
-          - label: "Categories"
-            name: "category"
-            widget: "relation"
-            collection: "categories"
-            multiple: true
-            required: false
-            searchFields: ["title"]
-            valueField: "title"
+        widget: "select"
+        multiple: true
+        options: ["feature", "configuration"]
       - { label: "Featured?", name: "featured", widget: "boolean", default: false, hint: "Should it be featured on the home page?" }
       - { name: "extends", widget: "hidden", required: true, default: "_layouts.post" }
       - { name: "section", widget: "hidden", required: true, default: "content" }
