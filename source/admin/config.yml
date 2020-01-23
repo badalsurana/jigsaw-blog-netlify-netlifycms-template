@@ -35,7 +35,7 @@ collections:
         widget: "list"
         field:
           - label: "Categories"
-            name: "categories"
+            name: "category"
             widget: "relation"
             collection: "categories"
             multiple: true
