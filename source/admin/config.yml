@@ -35,6 +35,7 @@ collections:
         widget: "relation"
         collection: "categories"
         multiple: true
+        required: false
         searchFields: ["title"]
         valueField: "title"
       - { label: "Featured?", name: "featured", widget: "boolean", default: false, hint: "Should it be featured on the home page?" }
